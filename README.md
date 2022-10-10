@@ -1,14 +1,13 @@
-<h1 align="center">Ignite Timer</h1>
-<h2>Home</h2>
+<h1 align="center">Coffee Delivery</h1>
+<!--<h2>Home</h2>
 <img src="screenshot.PNG" />
 <h2>Hístorico</h2>
-<!--<img src="screenshot2.PNG" />-->
+<img src="screenshot2.PNG" />-->
 
 ## :memo: Descrição
-* Uma aplicação da técnica Pomodoro, que consiste na utilização de um cronômetro para dividir o trabalho em períodos de 25 minutos, separados por breves intervalos
-
+* 
 ## :books: Funcionalidades
-* um cronômetro para dividir o trabalho em períodos, e visualizar o historico do timer
+*
      
 ## :wrench: Tecnologias utilizadas
 * TypeScript 
