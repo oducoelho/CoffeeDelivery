@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 import CartAdd from '../../../../assets/button-adicionar-no-carrinho.svg'
 import { useCart } from '../../../../hooks/useCart'
+import { formatMoney } from '../../../../utils/formatMoney'
 import {
   BannerContent,
   BuyArea,
@@ -27,16 +28,25 @@ interface CoffeeProps {
 }
 
 export const CoffeeBanner = ({ coffee }: CoffeeProps) => {
-  const [count, setCount] = useState(1)
+  const [quantity, setQuantity] = useState(1)
+
+  const handleIncrease = () => {
+    setQuantity((state) => state + 1)
+  }
+  const handleDecrease = () => {
+    setQuantity((state) => Math.max(state - 1, 1))
+  }
+
   const { addCoffeeToCart } = useCart()
   const handleAddToCart = () => {
     const coffeeToAdd = {
       ...coffee,
-      quantity: 1,
+      quantity,
     }
     addCoffeeToCart(coffeeToAdd)
   }
 
+  const formattedPrice = formatMoney(coffee.price)
   return (
     <Container>
       <BannerContent>
@@ -56,13 +66,14 @@ export const CoffeeBanner = ({ coffee }: CoffeeProps) => {
           <BuyArea>
             <Price>
               <span>
-                <strong>R$</strong>9,90
+                <strong>R$</strong>
+                {formattedPrice}
               </span>
             </Price>
             <div>
-              <span onClick={() => setCount((c) => Math.max(c - 1, 1))}>-</span>
-              {count}
-              <span onClick={() => setCount(count + 1)}>+</span>
+              <span onClick={handleDecrease}>-</span>
+              {quantity}
+              <span onClick={handleIncrease}>+</span>
             </div>
             <img src={CartAdd} onClick={handleAddToCart} />
           </BuyArea>

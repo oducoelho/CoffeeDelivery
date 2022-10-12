@@ -1,59 +1,38 @@
-import trash from '../../../../assets/trash.svg'
+import { useCart } from '../../../../hooks/useCart'
+import { formatMoney } from '../../../../utils/formatMoney'
+import { ProductContainer } from '../ProductContainer'
+import { CheckoutContainer, StyledCoffees } from './styled'
 
-import { useState } from 'react'
-import {
-  Buttons,
-  BuyConainer,
-  CheckoutContainer,
-  ProductContainer,
-  RemoveButton,
-  StyledCoffees,
-} from './styled'
+const DELIVERY_PRICE = 3.5
 
-interface CheckoutCoffeesProps {
-  id: number
-  image: string
-  title: string
-}
+export const SelectedCoffees = () => {
+  const { cartItems, cartItemsTotal, cartQuantity } = useCart()
+  const cartTotal = DELIVERY_PRICE + cartItemsTotal
 
-export const SelectedCoffees = (props: CheckoutCoffeesProps) => {
-  const [count, setCount] = useState(0)
+  const formattedItemsTotal = formatMoney(cartItemsTotal)
+  const formattedCartTotal = formatMoney(cartTotal)
+  const formattedDeliveryPrice = formatMoney(DELIVERY_PRICE)
+
   return (
     <StyledCoffees>
       <h1>Cafés selecionados</h1>
       <CheckoutContainer>
-        <ProductContainer>
-          <img src={props.image} alt="" />
-          <BuyConainer>
-            <p>{props.title}</p>
-            <Buttons>
-              <div>
-                <span onClick={() => setCount((c) => Math.max(c - 1, 0))}>
-                  -
-                </span>
-                {count}
-                <span onClick={() => setCount(count + 1)}>+</span>
-              </div>
-              <RemoveButton>
-                <img src={trash} alt="" />
-                REMOVER
-              </RemoveButton>
-            </Buttons>
-          </BuyConainer>
-          <p>R$ 9,90</p>
-        </ProductContainer>
+        {cartItems.map((item) => (
+          <ProductContainer key={item.id} coffee={item} />
+        ))}
+
         <nav>
           <span>
-            Total de itens <strong>R$ 9,90</strong>
+            Total de itens <strong>R$ {formattedItemsTotal}</strong>
           </span>{' '}
           <br />
           <span>
-            Entrega <strong>R$ 3,50</strong>
+            Entrega <strong>R$ {formattedDeliveryPrice}</strong>
           </span>
           <p>
-            Total <strong>R$ 13,40</strong>
+            Total <strong>R$ {formattedCartTotal}</strong>
           </p>
-          <button>CONFIRMAR PEDIDO</button>
+          <button disabled={cartQuantity <= 0}>CONFIRMAR PEDIDO</button>
         </nav>
       </CheckoutContainer>
     </StyledCoffees>

@@ -24,6 +24,7 @@ export const BuyCoffee = () => {
       type: 'TRADICIONAL',
       title: 'Expresso Tradicional',
       subtitle: 'O traditional café feito com água quente e grãos moídos',
+      price: 9.9,
     },
     {
       id: 2,
@@ -31,6 +32,7 @@ export const BuyCoffee = () => {
       type: 'TRADICIONAL',
       title: 'Expresso Americano',
       subtitle: 'Expresso diluído, menos intenso que o tradicional',
+      price: 9.9,
     },
     {
       id: 3,
@@ -38,6 +40,7 @@ export const BuyCoffee = () => {
       type: 'TRADICIONAL',
       title: 'Expresso Cremoso',
       subtitle: 'Café expresso tradicional com espuma cremosa',
+      price: 9.9,
     },
     {
       id: 4,
@@ -46,6 +49,7 @@ export const BuyCoffee = () => {
       typeTwo: 'GELADO',
       title: 'Expresso Gelado',
       subtitle: 'Bebida preparada com café expresso e cubos de gelo',
+      price: 9.9,
     },
     {
       id: 5,
@@ -54,6 +58,7 @@ export const BuyCoffee = () => {
       typeTwo: 'COM LEITE',
       title: 'Café com Leite',
       subtitle: 'Meio a meio de expresso tradicional com leite vaporizado',
+      price: 9.9,
     },
     {
       id: 6,
@@ -63,6 +68,7 @@ export const BuyCoffee = () => {
       title: 'Latte',
       subtitle:
         'Uma dose de café expresso com o dobro de leite e espuma cremosa',
+      price: 9.9,
     },
     {
       id: 7,
@@ -72,6 +78,7 @@ export const BuyCoffee = () => {
       title: 'Capuccino',
       subtitle:
         'Bebida com canela feita de doses iguais de café, leite e espuma',
+      price: 9.9,
     },
     {
       id: 8,
@@ -80,6 +87,7 @@ export const BuyCoffee = () => {
       typeTwo: 'COM LEITE',
       title: 'Macchiato',
       subtitle: 'Café expresso misturado com um pouco de leite quente e espuma',
+      price: 9.9,
     },
     {
       id: 9,
@@ -88,6 +96,7 @@ export const BuyCoffee = () => {
       typeTwo: 'COM LEITE',
       title: 'Mocaccino',
       subtitle: 'Café expresso com calda de chocolate, pouco leite e espuma',
+      price: 9.9,
     },
     {
       id: 10,
@@ -96,6 +105,7 @@ export const BuyCoffee = () => {
       typeTwo: 'COM LEITE',
       title: 'Chocolate Quente',
       subtitle: 'Bebida feita com chocolate dissolvido no leite quente e café',
+      price: 9.9,
     },
     {
       id: 11,
@@ -106,6 +116,7 @@ export const BuyCoffee = () => {
       title: 'Cubano',
       subtitle:
         'Drink gelado de café expresso com rum, creme de leite e hortelã',
+      price: 9.9,
     },
     {
       id: 12,
@@ -113,6 +124,7 @@ export const BuyCoffee = () => {
       type: 'ESPECIAL',
       title: 'Havaiano',
       subtitle: 'Bebida adocicada preparada com café e leite de coco',
+      price: 9.9,
     },
     {
       id: 13,
@@ -120,6 +132,7 @@ export const BuyCoffee = () => {
       type: 'ESPECIAL',
       title: 'Árabe',
       subtitle: 'Bebida preparada com grãos de café árabe e especiarias',
+      price: 9.9,
     },
     {
       id: 14,
@@ -128,6 +141,7 @@ export const BuyCoffee = () => {
       typeTwo: 'ALCOÓLICO',
       title: 'Irlandês',
       subtitle: 'Bebida a base de café, uísque irlandês, açúcar e chantilly',
+      price: 9.9,
     },
   ]
 
