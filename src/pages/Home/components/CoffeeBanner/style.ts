@@ -26,7 +26,6 @@ export const CoffeeContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
   span {
     font-size: 0.625rem;
     font-family: 'Roboto', sans-serif;
@@ -85,6 +84,10 @@ export const BuyArea = styled.div`
     cursor: pointer;
     font-family: 'Roboto';
     color: ${(props) => props.theme['purple-dark']};
+  }
+
+  img {
+    cursor: pointer;
   }
 `
 export const Price = styled.p`

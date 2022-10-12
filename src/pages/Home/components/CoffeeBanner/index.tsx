@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 import CartAdd from '../../../../assets/button-adicionar-no-carrinho.svg'
+import { useCart } from '../../../../hooks/useCart'
 import {
   BannerContent,
   BuyArea,
@@ -11,7 +12,7 @@ import {
   Container,
 } from './style'
 
-interface CoffeeBannerProps {
+export interface Coffee {
   id: number
   image: string
   title: string
@@ -21,8 +22,20 @@ interface CoffeeBannerProps {
   typeThere?: string
 }
 
-export const CoffeeBanner = (props: CoffeeBannerProps) => {
-  const [count, setCount] = useState(0)
+interface CoffeeProps {
+  coffee: Coffee
+}
+
+export const CoffeeBanner = ({ coffee }: CoffeeProps) => {
+  const [count, setCount] = useState(1)
+  const { addCoffeeToCart } = useCart()
+  const handleAddToCart = () => {
+    const coffeeToAdd = {
+      ...coffee,
+      quantity: 1,
+    }
+    addCoffeeToCart(coffeeToAdd)
+  }
 
   return (
     <Container>
@@ -30,11 +43,15 @@ export const CoffeeBanner = (props: CoffeeBannerProps) => {
         <Content>
           <CoffeeContent>
             <CoffeeImg>
-              <img src={props.image} alt="" />
+              <img src={coffee.image} alt="" />
             </CoffeeImg>
-            <span>{props.type}</span>
-            <h2>{props.title}</h2>
-            <p>{props.subtitle}</p>
+            <span>
+              {coffee.type}
+              {/* <span>{coffee.typeTwo}</span>
+              <span>{coffee.typeThere}</span> */}
+            </span>
+            <h2>{coffee.title}</h2>
+            <p>{coffee.subtitle}</p>
           </CoffeeContent>
           <BuyArea>
             <Price>
@@ -43,11 +60,11 @@ export const CoffeeBanner = (props: CoffeeBannerProps) => {
               </span>
             </Price>
             <div>
-              <span onClick={() => setCount((c) => Math.max(c - 1, 0))}>-</span>
+              <span onClick={() => setCount((c) => Math.max(c - 1, 1))}>-</span>
               {count}
               <span onClick={() => setCount(count + 1)}>+</span>
             </div>
-            <img src={CartAdd} />
+            <img src={CartAdd} onClick={handleAddToCart} />
           </BuyArea>
         </Content>
       </BannerContent>

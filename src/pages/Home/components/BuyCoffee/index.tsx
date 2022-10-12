@@ -17,7 +17,7 @@ import arabe from '../../../../assets/arabe.svg'
 import irlandes from '../../../../assets/irlandes.svg'
 
 export const BuyCoffee = () => {
-  const TypeOfCoffee = [
+  const coffees = [
     {
       id: 1,
       image: expressoTradicional,
@@ -136,16 +136,18 @@ export const BuyCoffee = () => {
       <h1>Nossos Cafés</h1>
 
       <div>
-        {TypeOfCoffee.map((coffes) => {
+        {coffees.map((coffee) => {
           return (
             <CoffeeBanner
-              id={coffes.id}
+              key={coffee.id}
+              coffee={coffee}
+              /* id={coffes.id}
               type={coffes.type}
               typeTwo={coffes.typeTwo}
               typeThere={coffes.typeThere}
               image={coffes.image}
               title={coffes.title}
-              subtitle={coffes.subtitle}
+              subtitle={coffes.subtitle} */
             />
           )
         })}
