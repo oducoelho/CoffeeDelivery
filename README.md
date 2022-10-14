@@ -1,13 +1,16 @@
 <h1 align="center">Coffee Delivery</h1>
-<!--<h2>Home</h2>
+
+<h2>Home</h2>
 <img src="screenshot.PNG" />
-<h2>Hístorico</h2>
-<img src="screenshot2.PNG" />-->
+<h2>Carrinho</h2>
+<img src="screenshot2.PNG" />
+<h2>Pedido Confirmado</h2>
+<img src="screenshot3.PNG" />
 
 ## :memo: Descrição
-* 
+* Um Ecommerce de Cafés
 ## :books: Funcionalidades
-*
+* Uma aplicação voltada para o emommerce, com funçoes de adição ao carrinho e confirmação do pedido.
      
 ## :wrench: Tecnologias utilizadas
 * TypeScript 
@@ -17,6 +20,8 @@
 * React Router Dom
 * React Hook Form
 * useContext
+* validações com o zod
+
      
 ## :rocket: Rodando o projeto
 Realize o download dos arquivos e execute o comando "npm i" para baixar a node modules dos projetos
