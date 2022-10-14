@@ -8,10 +8,10 @@
 <img src="screenshot3.PNG" />
 
 ## :memo: Descrição
-* Um Ecommerce de Cafés
+* Um Ecommerce para a compra de Cafés
 ## :books: Funcionalidades
-* Uma aplicação voltada para o emommerce, com funçoes de adição ao carrinho e confirmação do pedido.
-     
+* aplicação voltada para a encomenda de cafés, que tem 3 telas sendo a primeira uma tela de apresentação e também de listagem dos cafés disponíveis. Na segunda tela, o usuário precisa preencher um formulário com seus dados de endereço e ao lado direito podemos ver os itens no carrinho, podendo alterar a quantidade ou remover. E Na última tela, é exibido uma confirmação do pedido.
+
 ## :wrench: Tecnologias utilizadas
 * TypeScript 
 * ReactJs
