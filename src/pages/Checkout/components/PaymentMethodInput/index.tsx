@@ -1,5 +1,5 @@
-import { ContentContainer, PaymentMethodContainer } from './styled'
 import { forwardRef, InputHTMLAttributes, ReactNode } from 'react'
+import { ContentContainer, PaymentMethodContainer } from './styled'
 
 type PaymentMethodInputProps = InputHTMLAttributes<HTMLInputElement> & {
   icon: ReactNode

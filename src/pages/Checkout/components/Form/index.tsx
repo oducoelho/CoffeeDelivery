@@ -1,4 +1,6 @@
 import Icon from '../../../../assets/icon-checkout.svg'
+import IconMoney from '../../../../assets/icon-dinheiro.svg'
+
 import { FormContainer, Component } from './styled'
 
 import { AddressForm } from './AddressForm'
@@ -16,7 +18,14 @@ export const RequestCard = () => {
         <p>Informe o endereço onde deseja receber seu pedido</p>
         <AddressForm />
       </FormContainer>
-      <PayContainer />
+      <FormContainer>
+        <h3>
+          {' '}
+          <img src={IconMoney} alt="" /> Pagamento
+        </h3>
+        <p>O pagamento é feito na entrega. Escolha a forma que deseja pagar</p>
+        <PayContainer />
+      </FormContainer>
     </Component>
   )
 }

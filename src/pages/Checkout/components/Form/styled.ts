@@ -30,6 +30,10 @@ export const FormContainer = styled.div`
   }
 `
 export const Component = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 40rem;
   h1 {
     font-family: 'Baloo 2', sans-serif;
     font-weight: 700;
@@ -38,7 +42,7 @@ export const Component = styled.div`
     padding-bottom: 15px;
   }
 `
-export const OptionsContainer = styled.div`
+/* export const OptionsContainer = styled.div`
   width: 640px;
   background: ${(props) => props.theme['base-card']};
   padding: 2.5rem;
@@ -69,7 +73,7 @@ export const OptionsContainer = styled.div`
     padding-left: 1.7rem;
     padding-bottom: 32px;
   }
-`
+` */
 export const OptionsOfPay = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -79,6 +83,11 @@ export const OptionsOfPay = styled.div`
     color: ${(props) => props.theme['base-error']};
     padding: 0;
   }
+  background-color: transparent;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 0.75rem;
+
   /*display: flex;
   flex-direction: row;
   gap: 12px;

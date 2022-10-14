@@ -1,9 +1,8 @@
-import IconMoney from '../../../../assets/icon-dinheiro.svg'
 import MoneyIcon from '../../../../assets/dinheiro.svg'
 import CredicCard from '../../../../assets/cartao-de-credito.svg'
 import DebitCard from '../../../../assets/cartao-de-debito.svg'
 
-import { OptionsContainer, OptionsOfPay } from './styled'
+import { OptionsOfPay } from './styled'
 import { PaymentMethodInput } from '../PaymentMethodInput'
 import { useFormContext } from 'react-hook-form'
 import { RegularText } from '../../../../components/Typography'
@@ -32,25 +31,19 @@ export const PayContainer = () => {
   const paymentMethodError = errors?.paymentMethod?.message as unknown as string
 
   return (
-    <OptionsContainer>
-      <h3>
-        {' '}
-        <img src={IconMoney} alt="" /> Pagamento
-      </h3>
-      <p>O pagamento é feito na entrega. Escolha a forma que deseja pagar</p>
-      <OptionsOfPay>
-        {Object.entries(paymentMethods).map(([key, { label, icon }]) => (
-          <PaymentMethodInput
-            key={label}
-            icon={icon}
-            label={label}
-            value={key}
-            {...register('paymentMethod')}
-          />
-        ))}
+    <OptionsOfPay>
+      {Object.entries(paymentMethods).map(([key, { label, icon }]) => (
+        <PaymentMethodInput
+          key={label}
+          id={key}
+          icon={icon}
+          label={label}
+          value={key}
+          {...register('paymentMethod')}
+        />
+      ))}
 
-        {paymentMethodError && <RegularText>{paymentMethodError}</RegularText>}
-      </OptionsOfPay>
-    </OptionsContainer>
+      {paymentMethodError && <RegularText>{paymentMethodError}</RegularText>}
+    </OptionsOfPay>
   )
 }
