@@ -10,7 +10,7 @@
 ## :memo: Descrição
 * Um Ecommerce para a compra de Cafés
 ## :books: Funcionalidades
-* aplicação voltada para a encomenda de cafés, que tem 3 telas sendo a primeira uma tela de apresentação e também de listagem dos cafés disponíveis. Na segunda tela, o usuário precisa preencher um formulário com seus dados de endereço e ao lado direito podemos ver os itens no carrinho, podendo alterar a quantidade ou remover. E Na última tela, é exibido uma confirmação do pedido.
+* Aplicação voltada para a encomenda de cafés, que tem 3 telas sendo a primeira uma tela de apresentação e também de listagem dos cafés disponíveis. Na segunda tela, o usuário precisa preencher um formulário com seus dados de endereço e ao lado direito podemos ver os itens no carrinho, podendo alterar a quantidade ou remover. E Na última tela, é exibido uma confirmação do pedido.
 
 ## :wrench: Tecnologias utilizadas
 * TypeScript 
